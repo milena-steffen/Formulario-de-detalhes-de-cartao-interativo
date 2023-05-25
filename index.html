@@ -4,25 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Cartão interativo</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <img src="images/bg-card-front.png" alt="Parte frontal do cartão">
-        <img src="images/bg-card-back.png" alt="Parte traseira do cartão">
-    </hearder>
+        <div class="imagem">
+            <img src="images/bg-main-desktop.png" alt="imagem">
+        </div>
+    </header>
 
-    <main>
+    <section>
+
+        <div class="partefrontal">
+        <img class="logopartefrontal" src="images/card-logo.svg" alt="Logo">
+        <span class="numeropartefrontal">0000 0000 0000 0000</span>
+        </div>
+        
+        <div>
+            <span class="nomedocartao">Jane Appleseed</span>
+        </div>
+            
+        <div>
+            <span class="meseano">00/00</span>
+        </div>
+
+        <div class="partetraseira">
+            <span class="cvc">000</span>
+        </div>
+
+    </section>
+
+    <main>    
         <form>
-            <label for="nomedotitulardocartao">Nome do titular do cartão </label>
-            <input type="text" id="nomedotitulardocartao">
-            <label for="numerodocartao">Número do cartão</label>
-            <input type="text" id="numerodocartao">
-            <label for="datadeexpiracao">Data de expiração do cartão (mm/yy)</label>
-            <label for="codigodeverificacao">CVC</label>
-            <input type="text" id="codigodeverificacao">
+            <label for="nomedotitulardocartao">Nome do titular</label>
+            <input type="text" id="nomedotitulardocartao" class="inputpadrao" required placeholder="Jane Apleseed">
 
-            <input type="submit" value="Confirmar">
+            <label for="numerodocartao">Número do cartão</label>
+            <input type="text" id="numerodocartao" class="inputpadrao" required placeholder="1234 5678 9123 0000">
+
+            <label for="datadeexpiracao">Data exp (mm/yy)</label>
+            <label for="codigodeverificacao">CVC</label>
+
+            <input type="text" id="datadeexpiracao" class="inputdata" required placeholder="MM">
+            
+            <input type="text" id="mesdeexpiracao" class="inputmes" required placeholder="YY">
+            <input type="text" id="codigodeverificação" class="inputcodigo" required placeholder="123">
+            
+            <input type="submit" value="Confirmar"  class="confirmar">
+    </main>
+            
 </body>
 </html>
