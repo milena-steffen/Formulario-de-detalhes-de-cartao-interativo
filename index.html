@@ -25,8 +25,10 @@
         
                     <span class="numeropartefrontal">0000 0000 0000 0000</span>
                     
-                    <span class="nomedocartao">Jane Appleseed</span>
-                    <span class="meseano">00/00</span>
+                    <div class="informacoesgerais">
+                        <span class="nomedocartao">Jane Appleseed</span>
+                        <span class="meseano">00/00</span>
+                    </div>
                 </div>
                 <div class="partetraseira">
                 <span class="cvc">000</span>
@@ -34,7 +36,7 @@
             </section>
         </div>
     
-    <main>    
+    <main class="conteudo">    
         <form class="apresentacao">
             <div class="apresentacaodados">
                 <label for="nomedotitulardocartao">Nome do titular</label>
@@ -45,12 +47,14 @@
                 </div>
 
                 <div class="outrosdados">
-                <label for="datadeexpiracao">Data exp (mm/yy)</label>
-                <label for="codigodeverificacao">CVC</label>
+                    <label for="datadeexpiracao">Data exp (mm/yy)</label>
+                    <div class="estruturacodigodeverificacao">
+                    <label for="codigodeverificacao">CVC</label>
                 </div>
+            </div>
                
                 <div class="linha">
-                <input type="text" id="mesdeexpiracao" class="inputmes" required placeholder="M">
+                <input type="text" id="mesdeexpiracao" class="inputmes" required placeholder="MM">
                 <input type="text" id="anodeexpiracao" class="inputano" required placeholder="YY">
                 <input type="text" id="codigodeverificao" class="inputcodigo" required placeholder="123">
                 </div>   

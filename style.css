@@ -44,8 +44,6 @@ header{
     height: 245px;
     left: 164px;
     top: 187px;
-    
-
 }
 
 .logopartefrontal{
@@ -55,20 +53,25 @@ header{
 
 .numeropartefrontal{
     display: flex;
-    flex-direction: inherit;
+    
     width: 100%;
     font-size: 2.4rem; 
 }
 
+.informacoesgerais{
+    display: flex;
+    justify-content: space-between; 
+
+}
 
 .nomedocartao{
-    display: inline-flex;
-    flex-direction: unset;  
+    position: relative;
+    margin-bottom: 20px;
+    
 }
 
 .meseano{
     display: inline-flex;
-    flex-direction: unset;
     margin: 0px 20px;   
 }
 
@@ -95,11 +98,15 @@ header{
 main {
     width: 50%;
     text-transform: uppercase;
+    font-weight: bold;
     letter-spacing: 3px;
     font-size: 12px;
 }   
 
 .apresentacao{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     color: #21092F;
     width: 381px;
     height: 352px;
@@ -111,19 +118,21 @@ main {
 .apresentacaodados{
     display: flex;
     flex-direction: column;
+    gap: 10px;
     width: 100%;  
 }
 
 .outrosdados{
     display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
-    
+    justify-content: space-between;
+    gap: 10px; 
+}
+.estruturacodigodeverificacao{
+    margin-right: 39%;
 }
 
 .inputpadrao{
     padding: 5px;
-    margin: 10px 0px 20px 0px;
     height: 24px;
     border-radius: 5px;
     border: 1px solid lightgray;
@@ -131,36 +140,31 @@ main {
 
 .linha{
     display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
 }
 
 .inputmes{
     border: 1px solid lightgray;
     padding: 5px;
-    margin: 10px 0px;
     border-radius: 5px;
-    width: 80px;
+    width: 70px;
     height: 24px;
-
 }
 
 .inputano{
     border: 1px solid lightgray;
     padding: 5px;
-    margin: 10px 0px;
     border-radius: 5px;
-    width: 80px;
-    height: 24px;
-    
+    width: 70px;
+    height: 24px;    
 }
 
 .inputcodigo{
     border: 1px solid lightgray;
     padding: 5px;
-    margin: 10px 0px;
     border-radius: 5px;
-    width: 191px;
+    width: 170px;
     height: 24px;
 }
 
@@ -175,6 +179,7 @@ main {
     cursor: pointer;
     width: 381px;
     height: 53px;
+    margin-top: 10px;
 }
 
 .confirmar:hover{
