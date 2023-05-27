@@ -7,66 +7,63 @@
     <title>Cartão interativo</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
-    
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div class="cabecalho">
-            <section class="imagem">
-                    <img class="imagemdesktop" src="images/bg-main-desktop.png" alt="imagem">
-            </section>
-            <section class="frentedocartao">
-                <div class="partefrontal">
-                    <img class="logopartefrontal" src="images/card-logo.svg" alt="Logo">
-        
-                    <span class="numeropartefrontal">0000 0000 0000 0000</span>
+        <section class="cartoes">
+                <div class="centralizacao__cartoes">
+                    <div class="parte__frontal__do__cartao">
+                        <img class="imagem__frontal__do__cartao" src="images/bg-card-front.png" alt="Imagem da parte frontal do cartão de crédito">
                     
-                    <div class="informacoesgerais">
-                        <span class="nomedocartao">Jane Appleseed</span>
-                        <span class="meseano">00/00</span>
+                            <div class="informacoes__cartao__parte__frontal">
+                                <img class="logo__do__cartao" src="images/card-logo.svg" alt="Logo do cartão de crédito parte frontal">
+                                <span class="numero__parte__frontal__do__cartao">0000 0000 0000 0000</span>
+                                <div class="informacoes__cartao__parte_frontal__inferior">
+                                    <span class="nome__do__titular__do__cartao">Jane Appleseed</span>
+                                    <span class="mes__e__ano__de__expiracao__do__cartao">00/00</span>
+                                </div>
+                            </div>
+                    </div>
+                    
+                    <div class="parte__traseira__do__cartao">
+                        <img class="imagem__traseira" src="images/bg-card-back.png" alt="Imagem da parte traseira do cartão de crédito">
+                            <div class="informacoes__cartao__parte__traseira">
+                            <span class="codigo__de__verificacao__do__cartao">000</span>
+                            </div>
                     </div>
                 </div>
-                <div class="partetraseira">
-                <span class="cvc">000</span>
-                </div>
-            </section>
+        </section>
+            
+                
+                <main class="conteudo">
+                    <form class="apresentacao">
+                    <div class="apresentacaodados">
+                        <label for="nomedotitulardocartao">Nome do titular</label>
+                        <input type="text" id="nomedotitulardocartao" class="inputpadrao" required placeholder="Jane Apleseed">
+                        <label for="numerodocartao">Número do cartão</label>
+                        <input type="text" id="numerodocartao" class="inputpadrao" required placeholder="1234 5678 9123 0000">
+                    </div>
+                    <div class="outrosdados">
+                        <label for="datadeexpiracao">Data exp (mm/yy)</label>
+                        <div class="estruturacodigodeverificacao">
+                        <label for="codigodeverificacao">CVC</label>
+                        </div>
+                    </div>
+                    <div class="linha">
+                        <input type="text" id="mesdeexpiracao" class="inputmes" required placeholder="MM">
+                        <input type="text" id="anodeexpiracao" class="inputano" required placeholder="YY">
+                        <input type="text" id="codigodeverificao" class="inputcodigo" required placeholder="123">
+                    </div>
+            
+                <div>
+                    <input type="submit" value="Confirmar" class="confirmar">
+                    </div>
+            </form>      
+                </main>
         </div>
     
-    <main class="conteudo">    
-        <form class="apresentacao">
-            <div class="apresentacaodados">
-                <label for="nomedotitulardocartao">Nome do titular</label>
-                <input type="text" id="nomedotitulardocartao" class="inputpadrao" required placeholder="Jane Apleseed">
-
-                <label for="numerodocartao">Número do cartão</label>
-                <input type="text" id="numerodocartao" class="inputpadrao" required placeholder="1234 5678 9123 0000">
-                </div>
-
-                <div class="outrosdados">
-                    <label for="datadeexpiracao">Data exp (mm/yy)</label>
-                    <div class="estruturacodigodeverificacao">
-                    <label for="codigodeverificacao">CVC</label>
-                </div>
-            </div>
-               
-                <div class="linha">
-                <input type="text" id="mesdeexpiracao" class="inputmes" required placeholder="MM">
-                <input type="text" id="anodeexpiracao" class="inputano" required placeholder="YY">
-                <input type="text" id="codigodeverificao" class="inputcodigo" required placeholder="123">
-                </div>   
-            
-            <div>
-            <input type="submit" value="Confirmar" class="confirmar"> 
-            </div>  
-        </form>      
-    </main>        
-      
-    
-</header>
+    </header>
             
 </body>
 </html>

@@ -1,106 +1,99 @@
 @charset "UTF-8";
 
-body{
-    background-color: #F2F2F2;
-    box-sizing: border-box;
-    height: 100vh;
-    font-family: 'Space Grotesk', sem serifa;
-    justify-content: space-between;   
-}
-
 header{
-    display: flex;
-    flex-direction: row; 
-    
+    height: 100%;
+    font-family: 'Space Grotesk', sem serifa; 
 }
 
-.cabecalho{
-    width: 50%;
-    color: white;
-    position: relative;
-}
 
-.imagemdesktop{
-    display: flex;
-    width: 55%;
-    height: 100vh;
-}
 
-.frentedocartao{
-    text-transform: uppercase;
-    width: 50%;
-
-    
-}
-.partefrontal{
-    display: flex;
-    flex-direction: column;
-    background-image: url(images/bg-card-front.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: absolute;
-    height: 16rem;
-    width: 50%;
-    height: 245px;
-    left: 164px;
-    top: 187px;
-}
-
-.logopartefrontal{
-    width: 10%;
-    margin: 10px;
-}
-
-.numeropartefrontal{
-    display: flex;
-    
+.cartoes{
+    background-image: url(images/bg-main-mobile.png);
     width: 100%;
-    font-size: 2.4rem; 
+    height: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  
 }
 
-.informacoesgerais{
+.centralizacao__cartoes{
     display: flex;
-    justify-content: space-between; 
-
-}
-
-.nomedocartao{
-    position: relative;
-    margin-bottom: 20px;
+    flex-direction: column;
+   
     
 }
 
-.meseano{
-    display: inline-flex;
-    margin: 0px 20px;   
+.parte__frontal__do__cartao{
+    position: relative;
+    top: 9em;
+    left: 1em;
+    color: white;
 }
 
-.cvc{
-    position: absolute;
-    top: 120px;
-    left: 380px;
-    }
+.imagem__frontal__do__cartao{
+    width: 80%;
 
-.partetraseira{
+}
+
+
+.logo__do__cartao{
+    position: absolute;
+    width: 10%;
+    top: 5px;
+    left: 5px;
+}
+
+.numero__parte__frontal__do__cartao{
+    position: relative;
+    top: -6em;
+    padding: 1.0em;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+}
+
+.parte__traseira__do__cartao{
+    position: relative;
+    transform: translateY(-100%);
+    left: 2em;
+}
+
+.nome__do__titular__do__cartao{
+    position: relative;
+    bottom: 50px;
+    left: 25px;
+
+}
+
+.mes__e__ano__de__expiracao__do__cartao{
+    position: relative;
+    bottom: 50px;
+    left: 230px;
+}
+
+
+.imagem__traseira__do__cartao{
+    width: 80%;
+   
+}
+
+.codigo__de__verificacao__do__cartao{
+    color: white;
+    position: absolute;
+    bottom: 112px;
+    left: 350px;
+    
+}
+
+.conteudo {
     display: flex;
-    flex-direction: column;
-    background-image: url(images/bg-card-back.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 16rem;
-    position: absolute;
-    width: 50%;
-    height: 245px;
-    left: 258px;
-    top: 469px;
-}    
-
-main {
-    width: 50%;
+    width: 100%;
+    margin: auto;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 3px;
-    font-size: 12px;
+    font-size: 0.7rem;
+    justify-content: center;
+ 
 }   
 
 .apresentacao{
@@ -108,12 +101,11 @@ main {
     flex-direction: column;
     gap: 10px;
     color: #21092F;
-    width: 381px;
-    height: 352px;
-    left: 832px;
-    top: 275px; 
-    margin: 25%;
+    width: 327px;
+    height: 328px;
+
 }
+
 
 .apresentacaodados{
     display: flex;
@@ -125,46 +117,48 @@ main {
 .outrosdados{
     display: flex;
     justify-content: space-between;
-    gap: 10px; 
+    
 }
 .estruturacodigodeverificacao{
     margin-right: 39%;
 }
 
 .inputpadrao{
-    padding: 5px;
+    padding: 8px;
     height: 24px;
     border-radius: 5px;
+    margin: 2px;
     border: 1px solid lightgray;
 }
 
 .linha{
     display: flex;
     justify-content: space-between;
-    gap: 10px;
 }
 
 .inputmes{
     border: 1px solid lightgray;
-    padding: 5px;
+    padding: 8px;
+    margin-right: 0.2%;
     border-radius: 5px;
-    width: 70px;
+    width: 58px;
     height: 24px;
 }
 
 .inputano{
     border: 1px solid lightgray;
-    padding: 5px;
+    padding: 8px;
+    margin-right: 2%;
     border-radius: 5px;
-    width: 70px;
+    width: 58px;
     height: 24px;    
 }
 
 .inputcodigo{
     border: 1px solid lightgray;
-    padding: 5px;
+    padding: 8px;
     border-radius: 5px;
-    width: 170px;
+    width: 144px;
     height: 24px;
 }
 
@@ -173,11 +167,11 @@ main {
     color: white;
     background-color: #21092F;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 8px;
     width: 100%;
     transition: 1s all;
     cursor: pointer;
-    width: 381px;
+    width: 327px;
     height: 53px;
     margin-top: 10px;
 }
@@ -186,8 +180,63 @@ main {
     background-color: #6348FE;
 }
 
+@media screen and (min-width: 1024px){
 
+    header{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
 
+    .cartoes{
+        background-image: url(images/bg-main-desktop.png);
+        width: 100vh;
+        height: 100vh;
+        background-size: contain;
+      
+    }
+    
+    .centralizacao__cartoes{
+       
+    }
+    
+    .parte__frontal__do__cartao{
+        position: relative;
+        color: white;
+        transform: translateY( 50%);
+        transform: translatex( 25%);
+        
+    }
+    
+    .imagem__frontal__do__cartao{
+        width: 50%;
+    
+    }
+    
+    
+    .logo__do__cartao{
+        position: absolute;
+        
+    }
+    
+    .numero__parte__frontal__do__cartao{
+        position: relative;
+        top: -6em;
+        padding: 1.0em;
+        font-weight: 500;
+        letter-spacing: 0.3em;
+    }
+    
+    .parte__traseira__do__cartao{
+        position: relative;
+        transform: translatex(30%);
+        top: 20%;
+        
+        
+    }
+    
 
+    .imagem__traseira__do__cartao{
+        width: 50%;
+    }
 
-
+}
