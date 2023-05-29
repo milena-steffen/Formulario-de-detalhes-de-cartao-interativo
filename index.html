@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cartão interativo</title>
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"  href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -15,55 +16,65 @@
                 <div class="centralizacao__cartoes">
                     <div class="parte__frontal__do__cartao">
                         <img class="imagem__frontal__do__cartao" src="images/bg-card-front.png" alt="Imagem da parte frontal do cartão de crédito">
-                    
+                            
                             <div class="informacoes__cartao__parte__frontal">
                                 <img class="logo__do__cartao" src="images/card-logo.svg" alt="Logo do cartão de crédito parte frontal">
-                                <span class="numero__parte__frontal__do__cartao">0000 0000 0000 0000</span>
+                                <span id="cartao_numero" class="numero__parte__frontal__do__cartao">0000 0000 0000 0000</span>
                                 <div class="informacoes__cartao__parte_frontal__inferior">
-                                    <span class="nome__do__titular__do__cartao">Jane Appleseed</span>
-                                    <span class="mes__e__ano__de__expiracao__do__cartao">00/00</span>
+                                    <span id="cartao_nome" class="nome__do__titular__do__cartao">Milena Steffen</span>
+                                    <span  id="cartao_mes_ano" class="mes__e__ano__de__expiracao__do__cartao">00/00</span>
                                 </div>
                             </div>
                     </div>
                     
                     <div class="parte__traseira__do__cartao">
-                        <img class="imagem__traseira" src="images/bg-card-back.png" alt="Imagem da parte traseira do cartão de crédito">
+                        <img class="imagem__traseira__do__cartao" src="images/bg-card-back.png" alt="Imagem da parte traseira do cartão de crédito">
                             <div class="informacoes__cartao__parte__traseira">
-                            <span class="codigo__de__verificacao__do__cartao">000</span>
+                            <span id="cartao_cvc" class="codigo__de__verificacao__do__cartao">000</span>
                             </div>
                     </div>
                 </div>
         </section>
             
                 
-                <main class="conteudo">
-                    <form class="apresentacao">
-                    <div class="apresentacaodados">
-                        <label for="nomedotitulardocartao">Nome do titular</label>
-                        <input type="text" id="nomedotitulardocartao" class="inputpadrao" required placeholder="Jane Apleseed">
-                        <label for="numerodocartao">Número do cartão</label>
-                        <input type="text" id="numerodocartao" class="inputpadrao" required placeholder="1234 5678 9123 0000">
-                    </div>
-                    <div class="outrosdados">
-                        <label for="datadeexpiracao">Data exp (mm/yy)</label>
-                        <div class="estruturacodigodeverificacao">
-                        <label for="codigodeverificacao">CVC</label>
+                <main class="conteudo" style="z-index: 1;">
+                    <form class="apresentacao" id="apresentacao" onsubmit="enviarForm(event)">
+                        <div class="apresentacaodados">
+                            <label for="nomedotitulardocartao">Nome do titular</label>
+                            <input type="text" id="nomedotitulardocartao" class="inputpadrao" required placeholder="Milena Steffen" minlength="3" onkeyup="alterarnocartao()">
+                            <label for="numerodocartao" >Número do cartão</label>
+                            <input type="text" id="numerodocartao" class="inputpadrao" required placeholder="1234 5678 9123 0000" minlength="16" onkeyup="alterarnumerocartao()">
                         </div>
-                    </div>
-                    <div class="linha">
-                        <input type="text" id="mesdeexpiracao" class="inputmes" required placeholder="MM">
-                        <input type="text" id="anodeexpiracao" class="inputano" required placeholder="YY">
-                        <input type="text" id="codigodeverificao" class="inputcodigo" required placeholder="123">
-                    </div>
-            
-                <div>
-                    <input type="submit" value="Confirmar" class="confirmar">
-                    </div>
-            </form>      
+                        <div class="outrosdados">
+                            <label for="datadeexpiracao">Data exp (mm/yy)</label>
+                            <div class="estruturacodigodeverificacao">
+                            <label for="codigodeverificacao">CVC</label>
+                            </div>
+                        </div>
+                        <div class="linha">
+                            <input type="month" id="meseanodeexpiracao" class="inputmeseano" required placeholder="MM/AA" min="2023-05" onchange="alterarmeseanocartao()">
+                            
+                            <input type="text" id="codigodeverificao" class="inputcodigo" required placeholder="123" minlength="3" onkeyup="alterarcvc()">
+                        </div>
+                
+                        <div>
+                            <input type="submit" value="Confirmar" class="confirmar" id="botao" required>
+                        </div>
+                    </form>  
+                    
+                    <section class="conclusao__de__cadastro" id="conclusao__de__cadastro" style="display:none; text-align: center;">
+                        <img src="images/icon-complete.svg" alt="Imagem de conclusão de cadastro">
+                        <br><br>
+                        <p class="obrigadatitulo">Obrigada</p>
+                        <p class="subtitulo">Você adicionou seu cartão!</p>
+                        <input class="botaoobrigada" type="button" value="Continue"> 
+                    </section>
+
                 </main>
-        </div>
     
     </header>
-            
+
+    
+    <script src="script.js"></script>     
 </body>
 </html>

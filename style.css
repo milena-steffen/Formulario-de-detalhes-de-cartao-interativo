@@ -1,46 +1,50 @@
 @charset "UTF-8";
 
+/*
+* {
+    border: 1px solid black !important;
+}
+*/
+
+
 header{
     height: 100%;
     font-family: 'Space Grotesk', sem serifa; 
 }
-
-
 
 .cartoes{
     background-image: url(images/bg-main-mobile.png);
     width: 100%;
     height: 50%;
     background-repeat: no-repeat;
-    background-size: contain;
-  
+    background-size: contain; 
 }
 
 .centralizacao__cartoes{
     display: flex;
-    flex-direction: column;
-   
-    
+    flex-direction: column;  
 }
 
 .parte__frontal__do__cartao{
+    font-family: 'Space Grotesk', sem serifa;
+    font-weight: 500;
+    box-sizing: border-box;
     position: relative;
-    top: 9em;
-    left: 1em;
+    top: 11em;
     color: white;
+    z-index: 1;
 }
 
 .imagem__frontal__do__cartao{
+    box-sizing: border-box;
     width: 80%;
-
 }
-
 
 .logo__do__cartao{
     position: absolute;
     width: 10%;
-    top: 5px;
-    left: 5px;
+    top: 1em;
+    left: 1em;
 }
 
 .numero__parte__frontal__do__cartao{
@@ -51,37 +55,36 @@ header{
     letter-spacing: 0.3em;
 }
 
-.parte__traseira__do__cartao{
-    position: relative;
-    transform: translateY(-100%);
-    left: 2em;
-}
-
 .nome__do__titular__do__cartao{
+    text-transform: uppercase;
     position: relative;
-    bottom: 50px;
-    left: 25px;
-
+    bottom: 4em;
+    left: 1em;
 }
 
 .mes__e__ano__de__expiracao__do__cartao{
-    position: relative;
-    bottom: 50px;
-    left: 230px;
+    position: absolute;
+    bottom: 4em;
+    left: 18em;
 }
 
+.parte__traseira__do__cartao{
+    position: relative;
+    font-weight: 500;
+    top: 9em;
+    left: 2em;
+    box-sizing: border-box;
+}
 
 .imagem__traseira__do__cartao{
-    width: 80%;
-   
+    width: 80%; 
 }
 
 .codigo__de__verificacao__do__cartao{
     color: white;
     position: absolute;
-    bottom: 112px;
-    left: 350px;
-    
+    bottom: 6.0em;
+    left: 18em;  
 }
 
 .conteudo {
@@ -90,10 +93,9 @@ header{
     margin: auto;
     text-transform: uppercase;
     font-weight: bold;
-    letter-spacing: 3px;
-    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    font-size: 0.7em;
     justify-content: center;
- 
 }   
 
 .apresentacao{
@@ -103,7 +105,6 @@ header{
     color: #21092F;
     width: 327px;
     height: 328px;
-
 }
 
 
@@ -116,16 +117,16 @@ header{
 
 .outrosdados{
     display: flex;
-    justify-content: space-between;
-    
+    justify-content: space-between;    
 }
+
 .estruturacodigodeverificacao{
-    margin-right: 39%;
+    margin-right: 36%;
 }
 
 .inputpadrao{
     padding: 8px;
-    height: 24px;
+    height: 4em;
     border-radius: 5px;
     margin: 2px;
     border: 1px solid lightgray;
@@ -151,7 +152,7 @@ header{
     margin-right: 2%;
     border-radius: 5px;
     width: 58px;
-    height: 24px;    
+    height: 4em;    
 }
 
 .inputcodigo{
@@ -159,7 +160,7 @@ header{
     padding: 8px;
     border-radius: 5px;
     width: 144px;
-    height: 24px;
+    height: 4em;
 }
 
 .confirmar{
@@ -182,61 +183,54 @@ header{
 
 @media screen and (min-width: 1024px){
 
-    header{
-        display: grid;
-        grid-template-columns: 50% 50%;
-    }
+header{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
 
-    .cartoes{
-        background-image: url(images/bg-main-desktop.png);
-        width: 100vh;
-        height: 100vh;
-        background-size: contain;
-      
-    }
+.cartoes{
+    background-image: url(images/bg-main-desktop.png);
+    width: 100vh;
+    height: 100vh;
+    background-size: contain;     
+}
     
-    .centralizacao__cartoes{
-       
-    }
+.centralizacao__cartoes{
     
-    .parte__frontal__do__cartao{
-        position: relative;
-        color: white;
-        transform: translateY( 50%);
-        transform: translatex( 25%);
-        
-    }
+}
     
-    .imagem__frontal__do__cartao{
-        width: 50%;
+.parte__frontal__do__cartao{
+    position: relative;
+    color: white;
+    transform: translateY( 50%);
+    transform: translatex( 25%);       
+}
     
-    }
+.imagem__frontal__do__cartao{
+    width: 50%;
+}
     
     
-    .logo__do__cartao{
-        position: absolute;
-        
-    }
+.logo__do__cartao{
+    position: absolute;       
+}
     
-    .numero__parte__frontal__do__cartao{
-        position: relative;
-        top: -6em;
-        padding: 1.0em;
-        font-weight: 500;
-        letter-spacing: 0.3em;
-    }
+.numero__parte__frontal__do__cartao{
+    position: relative;
+    top: -8em;
+    padding: 2em;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+}
     
-    .parte__traseira__do__cartao{
-        position: relative;
-        transform: translatex(30%);
-        top: 20%;
-        
-        
-    }
+.parte__traseira__do__cartao{
+    position: relative;
+    transform: translatex(30%);
+}
     
-
-    .imagem__traseira__do__cartao{
-        width: 50%;
-    }
+.imagem__traseira__do__cartao{
+    width: 50%;
+}
 
 }
+
